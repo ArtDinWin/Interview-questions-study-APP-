@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: url('../images/bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+h2 {
+    display: inline-block;
+    padding: 16px;
+    text-align: center;
+    margin: 0;
+    position: relative;
+}
+
+.quiz-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 600px;
+    overflow: hidden;
+}
+
+.quiz-header {
+    position: relative;
+    padding: 64px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+ul li label {
+    cursor: pointer;
+}
+
+button {
+    background-color: #5ec6eb;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;   
+    color: #000000;
+    padding: 15px;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: #438faa;
+}
+
+button:focus {
+    outline: none;
+    background-color: #5ec6eb;
+}
+
+ul.answers-none {
+    visibility: hidden;    
+}
+button#next {
+    background-color: gainsboro;
+}
+div#tags{
+    display: inline-block;
+    position: absolute;
+    background-color: #f1a2ba;
+    color: black;
+    font-size: 12px;
+    padding: 5px 15px 8px 10px;
+    border-radius: 5px;
+}
+
+div#upload {
+    display: inline-block;
+    position: absolute;
+    background-color: transition;
+    color: black;
+    font-size: 12px;
+    padding: 10px 10px 7px 10px;
+    border-radius: 50px;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+#score {
+    display: flex;
+    padding-top: 20px;
+    opacity: 0.5;
+}
