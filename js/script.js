@@ -37,12 +37,13 @@ buttonUpload.addEventListener("click", function () {
 let ransArray = [];
 let rand;
 
-rand = Math.floor(Math.random() * (send.length - 1 + send.length - 1));
+//rand = Math.floor(Math.random() * (send.length - 1 + send.length - 1));
+rand = Math.floor(Math.random() * (send.length - 0)) + 0;
 while (rand == send.length) {
-  rand = Math.floor(Math.random() * (send.length - 1 + send.length - 1));
+  rand = Math.floor(Math.random() * (send.length - 0)) + 0;
 }
 
-question.innerHTML = send[rand].question;
+question.innerHTML = rand + 1 + ") " + send[rand].question;
 a_text.innerHTML = send[rand].answer;
 tags.innerHTML = "#" + send[rand].tags;
 if (tags.innerHTML == "#html") {
@@ -95,7 +96,8 @@ buttonNext.addEventListener("click", function () {
       "Вопрос: " + answered + "  из " + questions + " Подсказок: " + tips;
   } else {
     while (ransArray.includes(rand) || rand == send.length) {
-      rand = Math.floor(Math.random() * (send.length - 1 + send.length - 1));
+      //rand = Math.floor(Math.random() * (send.length - 1 + send.length - 1));
+      rand = Math.floor(Math.random() * (send.length - 0)) + 0;
     }
     ransArray.push(rand);
 
@@ -103,7 +105,9 @@ buttonNext.addEventListener("click", function () {
       answers.classList.add("answers-none");
     }
 
-    question.innerHTML = send[rand].question;
+    console.log("1) question => ", rand);
+    console.log("Send => ", send);
+    question.innerHTML = rand + 1 + ") " + send[rand].question;
     a_text.innerHTML = send[rand].answer;
     tags.innerHTML = "#" + send[rand].tags;
 
@@ -137,3 +141,4 @@ buttonNext.addEventListener("click", function () {
 });
 
 console.log("SEE => ", send[rand]["name/123"]);
+console.log("2) question => ", question.innerHTML);
